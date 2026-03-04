@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Product Detail</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Product Detail</h1>
-<img src="image2.jpg/mouse.jpg" width="200">
-<p class="price">120.00</p>
-<h3>Technical Specifications</h3>
-<table border="1">
-    <tr>
-        <td>Color</td>
-        <td>Purple/black</td>
-    </tr>
-    <tr>
-        <td>Warranty</td>
-        <td>1 Year</td>
-    </tr>
-</table>
-<form>
-    <label>Quantity:</label>
-    <input type="number" value="1">
-    <button onclick="window.location.href='cart.html'">Add to Cart</button>
-</form>
-<h1>Reviews</h1>
-<section>
-    <h3>Jolo</h3>
-    <blockquote class="review">
-        Affordable and smooth to use.
-    </blockquote>
-</section>
+<header><h1>Product Info</h1></header>
+<main style="padding: 20px; text-align: center;">
+    <img src="image2.jpg/mouse.jpg" style="width: 300px; margin: auto; border-radius: 15px;">
+    <h2>Technical Specifications</h2>
+    
+    <div style="overflow-x: auto; max-width: 600px; margin: auto;">
+        <table border="1" style="width: 100%; border-collapse: collapse; background: white;">
+            <tr style="background: var(--primary); color: white;">
+                <th style="padding: 10px;">Feature</th>
+                <th style="padding: 10px;">Value</th>
+            </tr>
+            <tr><td style="padding: 10px;">Color</td><td style="padding: 10px;">Purple/Black</td></tr>
+            <tr><td style="padding: 10px;">Warranty</td><td style="padding: 10px;">1 Year</td></tr>
+        </table>
+    </div>
+    
+    <button onclick="window.location.href='cart.html'" style="margin-top: 20px; background: var(--highlight); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+</main>
 </body>
 </html>
-

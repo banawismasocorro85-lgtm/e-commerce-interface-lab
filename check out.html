@@ -2,31 +2,31 @@
 <html>
 <head>
     <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>Checkout</h1>
-
-<section>
-    <h2>Shipping Address</h2>
-    <form>
-        Name: <input type="Ma.Socorro Banawis"><br><br>
-        Street: <input type="Uep Zone 3"><br><br>
-    </form>
-</section>
-
-<section>
-    <h2>Payment Method</h2>
-    <form>
-        <input type="radio" name="Gcash"> Gcash
-        <input type="radio" name="pay"> paymaya
-    </form>
-</section>
-
-<aside>
-    <h3>Total: 650.00</h3>
-    <button onclick="window.location.href='checkout.html'">Place order</button>
-</aside>
-
+<header><h1>Finalize Order</h1></header>
+<div class="checkout-layout">
+    <section class="checkout-main">
+        <div style="background: white; padding: 25px; border-radius: 12px;">
+            <h2>Shipping Details</h2>
+            <form>
+                <label>Full Name</label><br>
+                <input type="text" placeholder="Ma.Socorro Banawis" style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+                <label>Street Address</label><br>
+                <input type="text" placeholder="Uep Zone 3" style="width: 100%; padding: 10px; margin: 10px 0;">
+            </form>
+        </div>
+    </section>
+    
+    <aside class="checkout-aside">
+        <div style="background: var(--primary); color: white; padding: 25px; border-radius: 12px;">
+            <h3>Order Summary</h3>
+            <hr>
+            <p>Total: <strong>650.00</strong></p>
+            <button onclick="window.location.href='acoount.html'" style="width: 100%; background: var(--highlight); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: bold;">Place Order</button>
+        </div>
+    </aside>
+</div>
 </body>
 </html>

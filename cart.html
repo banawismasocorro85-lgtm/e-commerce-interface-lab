@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shopping Cart</title>
+    <title>Your Cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My Cart</h1>
-    <ul>
-        <li>Mouse - <span class="price">120</span></li>
-    </ul>
-    <button onclick="location.href='check out.html'">Checkout</button>
+    <header><h1>Shopping Cart</h1></header>
+    <main>
+        <div class="cart-item">
+            <img src="image2.jpg/mouse.jpg" width="80" style="border-radius: 5px;">
+            <div style="flex-grow: 1;">
+                <h3 style="margin: 0;">Wireless Mouse</h3>
+                <p style="color: var(--highlight);"> 120.00</p>
+            </div>
+            <input type="number" value="1" style="width: 45px; padding: 5px;">
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button 
+            onclick="window.location.href='check out.html'" 
+            style="padding: 12px 40px; background: var(--primary); color: white; border: none; border-radius: 5px; cursor: pointer;">Proceed to Checkout</button>
+        </div>
+    </main>
 </body>
 </html>
