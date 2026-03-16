@@ -48,3 +48,20 @@ function calculateTotal(...numbers) {
 // calculateTotal(1, 2, 3, 4); // Returns 10
 // calculateTotal(1, '2', 3);  // Throws: TypeError: Invalid input: All arguments must be numbers
 
+
+function getTopScorers(playerList) {
+    return playerList
+        .filter(player => player.score > 8) // Keep players with score > 8
+        .map(player => player.name)         // Extract only the names
+        .join(", ");                         // Combine with ", "
+}
+
+// Example usage:
+const players = [
+    {name: "Alice", score: 10}, 
+    {name: "Bob", score: 5},
+    {name: "Charlie", score: 9}
+];
+
+console.log(getTopScorers(players)); // Output: "Alice, Charlie"
+    
