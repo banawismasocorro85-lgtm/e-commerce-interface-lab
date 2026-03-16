@@ -87,3 +87,23 @@ console.log(shirt.finalPrice); // 45
 // Attempting to access the private field directly will cause a SyntaxError:
 // console.log(shirt.#discount); // Error: Private field '#discount' must be declared in an enclosing class
 
+function safeDivide(a, b) {
+    try {
+        // Explicitly check for zero to trigger our custom error
+        if (b === 0) {
+            throw new Error("Cannot divide by zero");
+        }
+        return a / b;
+    } catch (error) {
+        // Instead of crashing, return the error message
+        return `Error caught: ${error.message}`;
+    } finally {
+        // This will run no matter what happened
+        console.log("Division attempt completed.");
+    }
+}
+
+// Example usage:
+console.log(safeDivide(10, 2)); // Returns: 5
+console.log(safeDivide(10, 0)); // Returns: "Error caught: Cannot divide by zero"
+            
