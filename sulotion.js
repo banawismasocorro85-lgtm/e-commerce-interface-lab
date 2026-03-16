@@ -32,3 +32,19 @@ function generateIDs(count) {
 
 // Example usage:
 // generateIDs(7) would return: ["ID-0", "ID-1", "ID-2", "ID-3", "ID-4", "ID-6"]
+
+function calculateTotal(...numbers) {
+    // The second argument (0) sets the initial value of the accumulator
+    return numbers.reduce((sum, num) => {
+        // Validation: Check if the current argument is a number
+        if (typeof num !== 'number') {
+            throw new TypeError("Invalid input: All arguments must be numbers");
+        }
+        return sum + num;
+    }, 0);
+}
+
+// Example usage:
+// calculateTotal(1, 2, 3, 4); // Returns 10
+// calculateTotal(1, '2', 3);  // Throws: TypeError: Invalid input: All arguments must be numbers
+
