@@ -17,3 +17,18 @@ function checkVariable(input) {
             return "unknown";
     }
 }
+function generateIDs(count) {
+    let ids = [];
+    for (let i = 0; i < count; i++) {
+        // Skip the number 5
+        if (i === 5) {
+            continue; 
+        }
+        // Add the ID to the array
+        ids.push(`ID-${i}`);
+    }
+    return ids;
+}
+
+// Example usage:
+// generateIDs(7) would return: ["ID-0", "ID-1", "ID-2", "ID-3", "ID-4", "ID-6"]
