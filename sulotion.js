@@ -64,4 +64,26 @@ const players = [
 ];
 
 console.log(getTopScorers(players)); // Output: "Alice, Charlie"
-    
+
+class Item {
+    // The # prefix makes this field truly private
+    #discount = 0.1; 
+
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    // A 'getter' allows read-only access to the calculated value
+    get finalPrice() {
+        return this.price - (this.price * this.#discount);
+    }
+}
+
+// Example usage:
+const shirt = new Item("Shirt", 50);
+console.log(shirt.finalPrice); // 45
+
+// Attempting to access the private field directly will cause a SyntaxError:
+// console.log(shirt.#discount); // Error: Private field '#discount' must be declared in an enclosing class
+
