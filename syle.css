@@ -1,0 +1,153 @@
+/* CSS VARIABLES */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+}
+
+/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: var(--primary-color);
+    padding-top: 20px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: var(--accent-color);
+}
+
+/* MAIN CONTENT OFFSET */
+header, section, footer {
+    margin-left: 220px;
+    padding: 40px;
+}
+
+/* HERO */
+#hero {
+    height: 100vh;
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* centered text */
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: white;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* JOB */
+.job {
+    margin-bottom: 20px;
+}
+
+/* SKILLS */
+#skills ul {
+    list-style-type: square;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+form button {
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--accent-color);
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE (MOBILE-FIRST ADJUSTMENT) */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header, section, footer {
+        margin-left: 0;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+}
